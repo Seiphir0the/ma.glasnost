@@ -5,8 +5,13 @@
   [x]
   (println x "Hello, World!"))
 
+;this function uses if (expression) (true return result 1) (false return result 2)
 (defn isOld [age]
   "this function return whether this person is old or not"
   (if (< age 18)
     "this person is young"
     "this person is old"))
+
+(defn sayHi [name]
+  (println "Hello " name))
+

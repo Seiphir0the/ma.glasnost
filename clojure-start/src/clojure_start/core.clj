@@ -15,3 +15,7 @@
 (defn sayHi [name]
   (println "Hello " name))
 
+;forms
+;the IF form
+(defn isAString [ argument ]
+ (if (= String (class argument)) " a string your good to go" (str " naaaah, not a string, it's a " (class argument))))

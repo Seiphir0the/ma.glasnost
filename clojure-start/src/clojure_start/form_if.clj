@@ -21,7 +21,7 @@
            ("index out of bound, my friend") ;then
            (get vector position)))           ;else
 
-(defn testa [vect position]
+(defn get-result-at-position-fn [vect position]
   (if (= (get vect position) nil)
            ("index out of bound, my friend") ;then
            (get vect position)))           ;else

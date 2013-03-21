@@ -17,6 +17,7 @@
 
 ;return the string at the specified position if no value exist return an "index out of bound, my friend"
 (defn get-result-at-position [position]
+  "this function add " 
   (if (= (get vector position) nil)
            ("index out of bound, my friend") ;then
            (get vector position)))           ;else

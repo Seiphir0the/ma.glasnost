@@ -15,13 +15,12 @@ public class ClojureCaller {
 	public static void main(String[] args) {
 		DateMidnight dateMidnight = new DateMidnight();
 		try {
-			RT.loadResourceScript("form_date.clj");
+			RT.loadResourceScript("form-date.clj");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		Var aClojureFunction = RT.var("clojure-start.form-date", 
-                "a-clojure-function");
-//        aClojureFunction.invoke("an argument" "another one");
+                "");
+        aClojureFunction.invoke(dateMidnight);
 	}
 }

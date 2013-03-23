@@ -24,9 +24,8 @@
 (defn get-result-at-position-fn [vect position]
   ;inserting function documentation
   "this function get the value at the specified position"
-  (if (= (get vect position) nil)
+  (if (= (get vector position) nil)
            ("index out of bound, my friend") ;then
-           (get vect position)))           ;else
-
+           (get vector position)))           ;else
 
 (def doctors {:Pasteur "vaccin de la rage" :Jener "vaccin de la variole"})

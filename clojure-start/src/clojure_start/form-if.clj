@@ -22,6 +22,8 @@
            (get vector position)))           ;else
 
 (defn get-result-at-position-fn [vect position]
+  ;inserting function documentation
+  "this function get the value at the specified position"
   (if (= (get vect position) nil)
            ("index out of bound, my friend") ;then
            (get vect position)))           ;else

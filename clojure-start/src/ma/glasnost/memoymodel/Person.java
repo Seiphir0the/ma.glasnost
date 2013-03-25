@@ -4,7 +4,25 @@ public class Person {
 
 	private String name;
 
-	private Integer age;
+	private Long age;
+
+	private static Integer numberOfInstances = 0;
+
+	public Person() {
+		super();
+		++numberOfInstances;
+	}
+
+	public Person(String name) {
+		super();
+		this.name = name;
+	}
+
+	public Person(String name, Long age) {
+		super();
+		this.name = name;
+		this.age = age;
+	}
 
 	public String getName() {
 		return name;
@@ -14,12 +32,22 @@ public class Person {
 		this.name = name;
 	}
 
-	public Integer getAge() {
+	public Long getAge() {
 		return age;
 	}
 
-	public void setAge(Integer age) {
+	public void setAge(Long age) {
 		this.age = age;
+	}
+
+	public String getDescription(String yourName) {
+		return new StringBuilder().append("my name is ").append(name)
+				.append(" and my age is ").append(age)
+				.append(" pleased to meet you ").append(yourName).toString();
+	}
+
+	public static final Integer numberOfInstance() {
+		return numberOfInstances;
 	}
 
 }

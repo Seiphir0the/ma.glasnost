@@ -1,5 +1,8 @@
-(ns clojure-start.form-date)
- (:require ['clj-time.core :as 'time])
+(ns clojure-start.form-date
+ (:require [clj-time.core :refer [after?]]
+           [clj-time.local :refer [local-now]]))
 
-(defn compare-to-current-date [incoming-date]
-  (clj-time.core.after? incoming-date local-now))
+(defn compareWithCurrentDate [incoming-date]
+  (after? incoming-date (local-now)))
+
+(after? (date-time 1986 10 14) (local-now) )

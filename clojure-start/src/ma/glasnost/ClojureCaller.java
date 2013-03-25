@@ -2,6 +2,8 @@ package ma.glasnost;
 
 import java.io.IOException;
 
+import ma.glasnost.memoymodel.Person;
+
 import org.joda.time.DateMidnight;
 
 import clojure.lang.RT;
@@ -15,12 +17,11 @@ public class ClojureCaller {
 	public static void main(String[] args) {
 		DateMidnight dateMidnight = new DateMidnight();
 		try {
-			RT.loadResourceScript("form-date.clj");
+			RT.loadResourceScript("clojure-start/form-date.clj");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		Var aClojureFunction = RT.var("clojure-start.form-date", 
-                "");
-        aClojureFunction.invoke(dateMidnight);
+		Var aClojureFunction = RT.var("clojure-start.form-date", "compareWithCurrentDate");
+		aClojureFunction.invoke(dateMidnight);
 	}
 }

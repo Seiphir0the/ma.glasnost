@@ -10,7 +10,7 @@
   ;look for them on https://clojars.org
   ;syntaxe it's quite similare to Maven's 
   ;[group-id/artifact-id "version"]  
-  :dependencies [[org.clojure/clojure "1.4.0"]
+  :dependencies [[org.clojure/clojure "1.5.0"]
                  [org.clojars.nathell/clojure-contrib "1.2.0"]
                  [joda-time/joda-time "2.0"]
                  [clj-time "0.4.5"]])

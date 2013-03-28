@@ -29,3 +29,18 @@
            (get vector position)))           ;else
 
 (def doctors {:Pasteur "vaccin de la rage" :Jener "vaccin de la variole"})
+
+(def pays {:france 18 :maroc 25})
+
+;or sample 
+(defn is-adult [country age name]
+  (class age)
+  (if (or (> age (pays country)) (= (.toLowerCase name) "amine"))
+    (println (str "if you realy leave in " country " Your an adult now my dear"))
+    (println (str "Sorry to break it to you but your still young"))))
+
+;and sample
+(defn is-courageous [number-of-achievements paradigm-shift]
+  (if (and (< number-of-achievements 20) (paradigm-shift))
+    (println "Indeed you have some worth my son!!")
+    (println "Courage !! is it eatable !!??")))

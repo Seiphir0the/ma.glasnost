@@ -1,5 +1,6 @@
 (ns clojure-start.form-if)
 
+
 ;forms
 ;the IF form
 (defn isString [ argument ]

@@ -1,5 +1,8 @@
 (ns clojure-start.lazy-sequence)
 
+;convert a vector into a list
+(lazy-seq '() [1 2 3 4])
+
 (defn next-terms [term-1 term-2]
   (let [term-3 (+ term-1 term-2)]
     (lazy-seq 

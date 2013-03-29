@@ -27,6 +27,15 @@
 ;filter the values using the predicat (anonymous function)
 (filter #(= % 5) xs)
 
+;return a list with a values from 1 to 19
+(range 1 20)
+
+;return a list with values from 0 to 49
+(range 50)
+
+;return a list with values from 4 to 7
+(range 4 8)
+
 ;calculate the sum of all the values that can be diveded by three
 ;(sum (filter #(zero? (rem % 3)) xs))
 
@@ -39,6 +48,15 @@
 ;define a map named "my-map" with key values
 (def my-map (hash-map 1 "first-value" 2 "second-value" 3 "third value"))
 
+;return the union of two set
+;REMARK THE SET have unique values
+(union #{:a :b :c} #{:b :c :d})
+;result --> {:e :f, :b :d, :a :b, :c :d}
+(set '(:a :a :b :c :c :c :c :d :d))
+;result --> #{:a :c :b :d}
+
+;sort the items inside a collection
+(sort '( 1 3 8 9 5 6 7 2 4)) 
 
 (get my-map 2)
 ;result "second-value"
